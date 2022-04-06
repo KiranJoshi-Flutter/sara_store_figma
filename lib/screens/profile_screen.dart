@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -47,72 +48,103 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20.0,
+            ),
             Padding(
               padding: const EdgeInsets.only(
                 left: 42.0,
                 right: 30.0,
               ),
-              child: Card(
-                elevation: 0.0,
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                child: Container(
-                  width: double.infinity,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      CircleAvatar(
-                        radius: 50.0,
+              child: Container(
+                height: 200.0,
+                width: double.infinity,
+                // color: Colors.grey,
+                child: Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    Card(
+                      elevation: 0.0,
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                      Text(
-                        'Rosina Doe',
-                        style: appTextStyle(
-                          FontWeight.w600,
-                          18.0,
-                          Colors.black,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 12.0,
-                      ),
-                      Container(
+                      child: Container(
+                        height: 150.0,
+                        width: double.infinity,
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              'Address: 43 Oxford Road',
+                              'Rosina Doe',
                               style: appTextStyle(
-                                FontWeight.w400,
-                                15.0,
-                                Colors.black,
-                              ),
-                            ),
-                            Text(
-                              'M13 4GR',
-                              style: appTextStyle(
-                                FontWeight.w400,
-                                15.0,
-                                Colors.black,
-                              ),
-                            ),
-                            Text(
-                              'Manchester, UK',
-                              style: appTextStyle(
-                                FontWeight.w400,
-                                15.0,
+                                FontWeight.w600,
+                                18.0,
                                 Colors.black,
                               ),
                             ),
                             SizedBox(
-                              height: 17.0,
+                              height: 12.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(IconlyLight.location),
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                                Container(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Address: 43 Oxford Road',
+                                        style: appTextStyle(
+                                          FontWeight.w400,
+                                          16.0,
+                                          Colors.black,
+                                        ),
+                                      ),
+                                      Text(
+                                        'M13 4GR',
+                                        style: appTextStyle(
+                                          FontWeight.w400,
+                                          16.0,
+                                          Colors.black,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Manchester, UK',
+                                        style: appTextStyle(
+                                          FontWeight.w400,
+                                          16.0,
+                                          Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 17.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      top: 0.0,
+                      child: CircleAvatar(
+                        radius: 40.0,
+                        child: Image.asset(
+                          'assets/images/profile_screen/Rectangle 6.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

@@ -40,6 +40,7 @@ dependencies:
   intl: ^0.17.0
   animation_wrappers: ^3.0.0
   show_up_animation: ^2.0.0
+  iconly: ^1.0.1
   
 
 dev_dependencies:
