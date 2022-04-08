@@ -37,7 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Padding(
               padding: const EdgeInsets.only(
                 left: 50.0,
-                top: 51.0,
+                top: 36.0,
               ),
               child: Text(
                 'My profile',
@@ -88,10 +88,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Icon(IconlyLight.location),
                                 SizedBox(
-                                  width: 20.0,
+                                  width: 16.0,
                                 ),
                                 Container(
                                   child: Column(
@@ -145,6 +146,201 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                   ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 42.0,
+                top: 20.0,
+                right: 30.0,
+              ),
+              child: Container(
+                height: 60.0,
+                width: double.infinity,
+                child: Card(
+                  elevation: 0.0,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.only(
+                      left: 23.0,
+                      right: 23.0,
+                      // top: 19.0,
+                      // bottom: 19.0,
+                    ),
+                    title: Text(
+                      'Edit Profile',
+                      style: appTextStyle2(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16.0,
+                        textColor: Colors.black,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black,
+                      size: 18.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 42.0,
+                top: 20.0,
+                right: 30.0,
+              ),
+              child: Container(
+                height: 60.0,
+                width: double.infinity,
+                child: Card(
+                  elevation: 0.0,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.only(
+                      left: 23.0,
+                      right: 23.0,
+                      // top: 19.0,
+                      // bottom: 19.0,
+                    ),
+                    title: Text(
+                      'Shopping address',
+                      style: appTextStyle2(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16.0,
+                        textColor: Colors.black,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black,
+                      size: 18.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 42.0,
+                top: 20.0,
+                right: 30.0,
+              ),
+              child: Container(
+                height: 60.0,
+                width: double.infinity,
+                child: Card(
+                  elevation: 0.0,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.only(
+                      left: 23.0,
+                      right: 23.0,
+                      // top: 19.0,
+                      // bottom: 19.0,
+                    ),
+                    title: Text(
+                      'Order history',
+                      style: appTextStyle2(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16.0,
+                        textColor: Colors.black,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black,
+                      size: 18.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 42.0,
+                top: 20.0,
+                right: 30.0,
+              ),
+              child: Container(
+                height: 60.0,
+                width: double.infinity,
+                child: Card(
+                  elevation: 0.0,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.only(
+                      left: 23.0,
+                      right: 23.0,
+                      // top: 19.0,
+                      // bottom: 19.0,
+                    ),
+                    title: Text(
+                      'Cards',
+                      style: appTextStyle2(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16.0,
+                        textColor: Colors.black,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black,
+                      size: 18.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 42.0,
+                top: 20.0,
+                right: 30.0,
+              ),
+              child: Container(
+                height: 60.0,
+                width: double.infinity,
+                child: Card(
+                  elevation: 0.0,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.only(
+                      left: 23.0,
+                      right: 23.0,
+                      // top: 19.0,
+                      // bottom: 19.0,
+                    ),
+                    title: Text(
+                      'Notifications',
+                      style: appTextStyle2(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16.0,
+                        textColor: Colors.black,
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.black,
+                      size: 18.0,
+                    ),
+                  ),
                 ),
               ),
             ),

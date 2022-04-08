@@ -20,3 +20,16 @@ TextStyle appTextStyle(
     ),
   );
 }
+
+TextStyle appTextStyle2(
+    {required FontWeight fontWeight,
+    required double fontSize,
+    required Color textColor}) {
+  return TextStyle(
+    fontFamily: 'SF-Pro-Text-Semibold',
+    fontWeight: fontWeight,
+    fontSize: fontSize,
+    color: textColor,
+    letterSpacing: 0.1,
+  );
+}

@@ -75,6 +75,17 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/profile_screen/
+
+  fonts:
+    - family: SF-Pro-Text-Black
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Black.otf
+#          style: italic
+    - family: SF-Pro-Text-Semibold
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Semibold.otf
+#          weight: 700
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
