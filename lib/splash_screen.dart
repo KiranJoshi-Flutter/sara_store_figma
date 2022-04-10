@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sara_store/constants.dart';
+import 'package:sara_store/screens/login_screen.dart';
 import 'package:sara_store/screens/main_screen.dart';
 import 'package:sara_store/screens/profile_screen.dart';
 import 'package:show_up_animation/show_up_animation.dart';
@@ -33,10 +34,16 @@ class _SplashScreenState extends State<SplashScreen> {
         //     ),
         //   ),
         // );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ProfileScreen(),
+        //   ),
+        // );
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProfileScreen(),
+            builder: (context) => LoginScreen(),
           ),
         );
       }),
