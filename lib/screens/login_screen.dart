@@ -134,6 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         left: 4.0,
                       ),
                       child: TextFormField(
+                        obscuringCharacter: '*',
                         controller: passwordController,
                         style: appTextStyle(
                           FontWeight.w600,
@@ -144,28 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         keyboardType: TextInputType.visiblePassword,
                         cursorColor: Colors.grey,
                         decoration: InputDecoration(
-                          // suffixIcon: IconButton(
-                          //   icon: Icon(
-                          //     passwordHide
-                          //         ? Icons.visibility_outlined
-                          //         : Icons.visibility_off,
-                          //     color: Colors.black,
-                          //   ),
-                          //   onPressed: () {
-                          //     setState(
-                          //       () {
-                          //         passwordHide = !passwordHide;
-                          //       },
-                          //     );
-                          //   },
-                          // ),
                           suffixIcon: InkWell(
-                            // icon: Icon(
-                            //   passwordHide
-                            //       ? Icons.visibility_outlined
-                            //       : Icons.visibility_off,
-                            //   color: Colors.black,
-                            // ),
                             child: Text(
                               passwordHide ? 'Show' : 'Hide',
                               style: appTextStyle(
@@ -183,6 +163,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                           ),
                         ),
+                      ),
+                    ),
+                    SizedBox(height: 24.0),
+                    Text(
+                      'Forgot passcode?',
+                      style: appTextStyle(
+                        FontWeight.w600,
+                        16.0,
+                        kSecondaryColor,
                       ),
                     ),
                   ],
