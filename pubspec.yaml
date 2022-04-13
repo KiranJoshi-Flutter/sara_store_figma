@@ -76,6 +76,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/images/profile_screen/
+    - assets/images/home_screen/
 
   fonts:
     - family: SF-Pro-Text-Black

@@ -5,6 +5,7 @@ Color kPrimaryColor = const Color(0xFFea5c25);
 Color kSecondaryColor = const Color(0xFFfea418);
 // Color kBackgroundColor = const Color(0xFFfaf6ea);
 Color kBackgroundColor = const Color(0xFFE5E5E5);
+const kLogoBlur = Color(0xFF047bfb);
 
 // ba6c5c
 Color kDarkBackgroundColor = const Color(0xFFba6c5c);
