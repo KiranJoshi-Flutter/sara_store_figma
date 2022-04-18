@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(30.0),
                         borderSide: BorderSide(
                           color: Color(0xFFC9C9C9),
+                          // color: Color(0xFF5956E9),
                           width: 2.0,
                         ),
                       ),
@@ -96,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(
                   left: 50.0,
                   right: 50.0,
-                  top: 55.0,
+                  top: 46.0,
                 ),
                 child: Text(
                   'Order Online Collect in store',
@@ -108,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(
-                height: 50.0,
+                height: 36.0,
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -1119,6 +1120,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 20.0,
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 30.0,
               ),
             ],
           ),

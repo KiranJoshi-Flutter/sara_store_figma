@@ -1,71 +1,126 @@
-import 'package:animation_wrappers/animation_wrappers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
+import 'check1.dart';
+import 'check2.dart';
+import 'check3.dart';
+import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _counter = 0;
+  int _selectedNavItem = 0;
+  String title = 'Ghar Jagga';
 
-  void _incrementCounter() {
+  PageController pageController = PageController(
+    initialPage: 0,
+    keepPage: true,
+  );
+
+  Widget buildPageView() {
+    return PageView(
+      controller: pageController,
+      physics: NeverScrollableScrollPhysics(),
+      onPageChanged: (index) {
+        pageChanged(index);
+      },
+      children: <Widget>[
+        HomeScreen(),
+        Check1(),
+        Check2(),
+        Check3(),
+      ],
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void pageChanged(int index) {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
+      _selectedNavItem = index;
+    });
+  }
+
+  void bottomTapped(int index) {
+    setState(() {
+      _selectedNavItem = index;
+      pageController.animateToPage(index,
+          duration: Duration(milliseconds: 500), curve: Curves.ease);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: FadedSlideAnimation(
-        beginOffset: Offset(0, 0.3),
-        endOffset: Offset(0, 0),
-        slideCurve: Curves.linearToEaseOut,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'You have pushed the button this many times:',
-              ),
-              Image.asset('assets/icons/logo.png'),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-            ],
+      backgroundColor: Colors.transparent,
+      body: buildPageView(),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0.0,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        onTap: ((value) {
+          setState(() {
+            _selectedNavItem = value;
+          });
+          print(title);
+          bottomTapped(value);
+        }),
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              IconlyLight.home,
+              color: _selectedNavItem == 0
+                  ? kBottomNavBarActivateColor
+                  : kBottomNavBarNotActivateColor,
+              size: 26,
+            ),
+            label: 'Home',
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              IconlyLight.heart,
+              color: _selectedNavItem == 1
+                  ? kBottomNavBarActivateColor
+                  : kBottomNavBarNotActivateColor,
+              size: 26,
+            ),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              IconlyLight.profile,
+              color: _selectedNavItem == 2
+                  ? kBottomNavBarActivateColor
+                  : kBottomNavBarNotActivateColor,
+              size: 26,
+            ),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              IconlyLight.buy,
+              color: _selectedNavItem == 3
+                  ? kBottomNavBarActivateColor
+                  : kBottomNavBarNotActivateColor,
+              size: 26,
+            ),
+            label: 'Home',
+          ),
+        ],
+        selectedItemColor: kBottomNavBarActivateColor,
+        // showSelectedLabels: false,
+        // showUnselectedLabels: false,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

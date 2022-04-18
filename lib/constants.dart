@@ -7,7 +7,9 @@ Color kSecondaryColor = const Color(0xFFfea418);
 Color kBackgroundColor = const Color(0xFFE5E5E5);
 const kLogoBlur = Color(0xFF047bfb);
 
-// ba6c5c
+const Color kBottomNavBarActivateColor = Color(0xFFEE5D26);
+const Color kBottomNavBarNotActivateColor = Color(0xFF200E32);
+
 Color kDarkBackgroundColor = const Color(0xFFba6c5c);
 
 TextStyle appTextStyle(
