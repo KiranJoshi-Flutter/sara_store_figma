@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
+import 'package:sara_store/screens/search_results.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -37,6 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     right: 16.0,
                   ),
                   child: TextFormField(
+                    style: appTextStyle(
+                      FontWeight.w600,
+                      17.0,
+                      Colors.black,
+                    ),
                     scrollPadding: EdgeInsets.zero,
                     cursorColor: kLogoBlur,
                     decoration: InputDecoration(
@@ -80,7 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             size: 24,
                             color: Colors.black,
                           ),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SearchResults(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),

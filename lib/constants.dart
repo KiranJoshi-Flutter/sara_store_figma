@@ -10,6 +10,8 @@ const kLogoBlur = Color(0xFF047bfb);
 const Color kBottomNavBarActivateColor = Color(0xFFEE5D26);
 const Color kBottomNavBarNotActivateColor = Color(0xFF200E32);
 
+const Color kSearchBarActiveColor = Color(0xFF5956E9);
+
 Color kDarkBackgroundColor = const Color(0xFFba6c5c);
 
 TextStyle appTextStyle(
