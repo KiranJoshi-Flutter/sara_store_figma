@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
+import 'package:sara_store/screens/widgets/result_of_search_screen.dart';
 
 class SearchResults extends StatefulWidget {
   const SearchResults({Key? key}) : super(key: key);
@@ -93,6 +94,54 @@ class _SearchResultsState extends State<SearchResults> {
                   ),
                 ),
               ),
+            ),
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 52.0,
+            ),
+            Text(
+              'Found 6 results',
+              style: appTextStyle(
+                FontWeight.w600,
+                28.0,
+                Colors.black,
+              ),
+            ),
+            SizedBox(
+              height: 46.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ResultOfSearchScreen(),
+                ResultOfSearchScreen(),
+              ],
+            ),
+            SizedBox(
+              height: 46.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ResultOfSearchScreen(),
+                ResultOfSearchScreen(),
+              ],
+            ),
+            SizedBox(
+              height: 46.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ResultOfSearchScreen(),
+                ResultOfSearchScreen(),
+              ],
             ),
           ],
         ),
