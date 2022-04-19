@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
@@ -11,6 +12,8 @@ class SearchResults extends StatefulWidget {
 }
 
 class _SearchResultsState extends State<SearchResults> {
+  bool api = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,54 +101,89 @@ class _SearchResultsState extends State<SearchResults> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 52.0,
-            ),
-            Text(
-              'Found 6 results',
-              style: appTextStyle(
-                FontWeight.w600,
-                28.0,
-                Colors.black,
+      body: api == false
+          ? SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 52.0,
+                  ),
+                  Text(
+                    'Found 6 results',
+                    style: appTextStyle(
+                      FontWeight.w600,
+                      28.0,
+                      Colors.black,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 46.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ResultOfSearchScreen(),
+                      ResultOfSearchScreen(),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 46.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ResultOfSearchScreen(),
+                      ResultOfSearchScreen(),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 46.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ResultOfSearchScreen(),
+                      ResultOfSearchScreen(),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            SizedBox(
-              height: 46.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            )
+          : Column(
               children: [
-                ResultOfSearchScreen(),
-                ResultOfSearchScreen(),
+                SizedBox(
+                  height: 40.0,
+                ),
+                Image.asset('assets/images/search_results/Saly-17.png'),
+                Text(
+                  'Item not found',
+                  style: appTextStyle(
+                    FontWeight.w600,
+                    28.0,
+                    Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 40.0,
+                    right: 40.0,
+                  ),
+                  child: Text(
+                    'Try a more generic search term or try looking for alternative products.',
+                    style: appTextStyle(
+                      FontWeight.w400,
+                      18.0,
+                      Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ],
             ),
-            SizedBox(
-              height: 46.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ResultOfSearchScreen(),
-                ResultOfSearchScreen(),
-              ],
-            ),
-            SizedBox(
-              height: 46.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ResultOfSearchScreen(),
-                ResultOfSearchScreen(),
-              ],
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
