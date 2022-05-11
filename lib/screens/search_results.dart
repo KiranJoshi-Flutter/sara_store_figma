@@ -101,7 +101,7 @@ class _SearchResultsState extends State<SearchResults> {
           ],
         ),
       ),
-      body: api == false
+      body: api == true
           ? SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,

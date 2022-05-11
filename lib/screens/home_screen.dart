@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sara_store/constants.dart';
 import 'package:sara_store/screens/search_results.dart';
+import 'package:sara_store/screens/single_item.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -189,75 +190,85 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Row(
                           children: [
-                            Container(
-                              height: 320.0,
-                              // color: Colors.red,
-                              child: Stack(
-                                alignment: Alignment.bottomCenter,
-                                children: [
-                                  Card(
-                                    elevation: 0.0,
-                                    color: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                    ),
-                                    child: Container(
-                                      height: 270.0,
-                                      width: 220.0,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          SizedBox(
-                                            height: 30.0,
-                                          ),
-                                          Text(
-                                            'Apple Watch',
-                                            style: appTextStyle(
-                                              FontWeight.w600,
-                                              22.0,
-                                              Colors.black,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const SingleItem()),
+                                );
+                              },
+                              child: Container(
+                                height: 320.0,
+                                // color: Colors.red,
+                                child: Stack(
+                                  alignment: Alignment.bottomCenter,
+                                  children: [
+                                    Card(
+                                      elevation: 0.0,
+                                      color: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20.0),
+                                      ),
+                                      child: Container(
+                                        height: 270.0,
+                                        width: 220.0,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            SizedBox(
+                                              height: 30.0,
                                             ),
-                                          ),
-                                          SizedBox(
-                                            height: 14.0,
-                                          ),
-                                          Text(
-                                            'Series 6 . Red',
-                                            style: appTextStyle(
-                                              FontWeight.w600,
-                                              16.0,
-                                              Color(0xFF868686),
+                                            Text(
+                                              'Apple Watch',
+                                              style: appTextStyle(
+                                                FontWeight.w600,
+                                                22.0,
+                                                Colors.black,
+                                              ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            height: 16.0,
-                                          ),
-                                          Text(
-                                            'Rs. 359',
-                                            style: appTextStyle(
-                                              FontWeight.w600,
-                                              16.0,
-                                              Color(0xFFFEA517),
+                                            SizedBox(
+                                              height: 14.0,
                                             ),
-                                          ),
-                                          SizedBox(
-                                            height: 40.0,
-                                          ),
-                                        ],
+                                            Text(
+                                              'Series 6 . Red',
+                                              style: appTextStyle(
+                                                FontWeight.w600,
+                                                16.0,
+                                                Color(0xFF868686),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 16.0,
+                                            ),
+                                            Text(
+                                              'Rs. 359',
+                                              style: appTextStyle(
+                                                FontWeight.w600,
+                                                16.0,
+                                                Color(0xFFFEA517),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 40.0,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Positioned(
-                                    top: 0.0,
-                                    child: CircleAvatar(
-                                      radius: 70.0,
-                                      backgroundColor: Colors.pink,
-                                      child: Image.asset(
-                                          'assets/images/home_screen/image.png'),
+                                    Positioned(
+                                      top: 0.0,
+                                      child: CircleAvatar(
+                                        radius: 70.0,
+                                        backgroundColor: Colors.pink,
+                                        child: Image.asset(
+                                            'assets/images/home_screen/image.png'),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                             SizedBox(

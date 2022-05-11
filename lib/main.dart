@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sara_store/constants.dart';
 import 'package:sara_store/screens/main_screen.dart';
+import 'package:sara_store/screens/single_item.dart';
 import 'package:sara_store/splash_screen.dart';
 
 import 'functions.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: createMaterialColor(kPrimaryColor),
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: SingleItem(),
     );
   }
 }
